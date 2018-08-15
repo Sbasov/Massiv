@@ -1,6 +1,6 @@
 /**
  * Created by User on 13.08.2018.
- * Выбор максимального элемента массива
+ * Выбор работы с калькулятором или с массивом
  */
 
 
@@ -11,9 +11,10 @@ public class Massiv {
     public static void main(String[] args) {
         Scanner razmer = new Scanner(System.in);
         System.out.println("Выберети действие: 1 -использовать калькулятор; 2-использовать массив");
+        //Вводим число, которое определяет выбранную операцию
         int vibor1 = razmer.nextInt();
         if (vibor1 == 1) {
-            System.out.println("Калькулятор");
+            System.out.println("вы выбрали работу с калькулятором");
             {//Выводим на экран возможные действия
                 System.out.println("Выберете действие: 1 - Сложение(+), 2 - Вычитание(-), 3 - Умножение(*), 4 - Деление(/)");
                 //Добавляем новую переменную choose.
@@ -60,6 +61,7 @@ public class Massiv {
             }
             razmer.close();
         } else if (vibor1 == 2) {
+            System.out.println("Вы выбрали работу с массивом ");
             System.out.println("Введите количество элементов массива:");
             //Вводим количество элементов в массиве
             int razmer1 = razmer.nextInt();
@@ -75,7 +77,7 @@ public class Massiv {
             for (int i = 0; i < razmer1; i++) {
                 System.out.print(" " + MyMassiv[i] + " ");
             }
-            //Используем перенос на новую строку, просто для лучшей наглядности
+            //Используем перенос на новую строку, просто для лучшей наглядности при выводе на экран
             System.out.println("");
             //Поиск самого длинного слова
             String MaxA = MyMassiv[0];
